@@ -1,10 +1,10 @@
-Adam's vimrc
+Vim File Largely Based on Adam jacob's Vim Files
 -----
 
 To use, want to do this:
 
 ```bash
-$ git clone github.com/adamhjk/adam-vim ~/.vim
+$ git clone git@github.com:drag00n/vimfiles.git
 $ cd ~/.vim
 $ make install
 ```

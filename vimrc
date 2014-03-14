@@ -8,37 +8,37 @@ call vundle#rc()
 " required! 
 Bundle 'gmarik/vundle'
 
-" My Bundles here:
-"
-" original repos on github
-Bundle 'tpope/vim-fugitive'
-Bundle 'scrooloose/nerdtree'
-Bundle 'mileszs/ack.vim'
-Bundle 'FuzzyFinder'
-Bundle 'taglist.vim'
-Bundle 'Gist.vim'
+"Language Plugins
+Bundle 'elzr/vim-json'
+Bundle 'tpope/vim-rails'
+Bundle 'PProvost/vim-ps1'
+Bundle 'groenewege/vim-less'
+Bundle 'majutsushi/tagbar'
+Bundle 'scrooloose/syntastic'
+
+"Misc Plugins
+
 Bundle 'L9'
-Bundle 'kien/ctrlp.vim'
-Bundle 'VimClojure'
+Bundle 'mattn/gist-vim'
+Bundle 'mattn/webapi-vim'
 Bundle 'tpope/vim-surround'
-Bundle 'scrooloose/nerdcommenter'
+Bundle 'kien/ctrlp.vim'
+Bundle 'godlygeek/tabular'
+"Show tree in vim window
+Bundle 'scrooloose/nerdtree'
+Bundle 'tpope/vim-eunuch'
+"Git wrapper
+Bundle 'tpope/vim-fugitive'
+Bundle 'ConradIrwin/vim-bracketed-paste'
+Bundle 'terryma/vim-multiple-cursors'
+Bundle 'FuzzyFinder'
+"Source code browser
+Bundle 'taglist.vim'
+"Sweet R-Spec Runner
 Bundle 'duskhacker/sweet-rspec-vim'
 Bundle 'tpope/vim-markdown'
-Bundle 'tpope/vim-haml'
-Bundle 'tpope/vim-rails'
-Bundle 'confluencewiki.vim'
-Bundle 'majutsushi/tagbar'
-Bundle 'vim-orgmode'
 Bundle 'vim-ruby/vim-ruby'
-Bundle 'matchit.zip'
-Bundle 'CSApprox'
-Bundle 'timcharper/textile.vim'
-Bundle 'jimenezrick/vimerl'
-Bundle 'rson/vim-conque'
-Bundle 'Lokaltog/vim-powerline'
-Bundle 'myusuf3/numbers.vim'
 Bundle 'altercation/vim-colors-solarized'
-Bundle 'scrooloose/syntastic'
 Bundle 'JSON.vim'
 
 filetype plugin indent on     " required! 
@@ -60,9 +60,6 @@ set wildmenu
 set wildmode=list:longest
 set title
 
-set softtabstop=2
-set shiftwidth=2
-set tabstop=2
 set autoindent
 " Use spaces instead of tabs
 set expandtab
@@ -104,18 +101,8 @@ let Tlist_Enable_Fold_Column=0
 let g:gist_detect_filetype = 1
 let g:tagbar_autofocus = 1
 
-let g:vimclojure#ParenRainbow = 1
-let g:vimclojure#HighlightBuiltins = 1 
-let g:vimclojure#WantNailgun = 1
 let python_highlight_all = 1
 let g:Powerline_symbols = 'fancy'
-
-map <right> :bn<cr>
-map <left> :bp<cr>
-map <leader>tn :tabnew<cr>
-map <leader>te :tabedit
-map <leader>tc :tabclose<cr>
-map <leader>tm :tabmove
 
 set grepprg=ack
 set grepformat=%f:%l:%m
