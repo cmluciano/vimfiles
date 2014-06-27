@@ -15,9 +15,14 @@ Bundle 'PProvost/vim-ps1'
 Bundle 'groenewege/vim-less'
 Bundle 'majutsushi/tagbar'
 Bundle 'scrooloose/syntastic'
+"Bundle 'fatih/vim-go'
+"Chef syntax
+Bundle "MarcWeber/vim-addon-mw-utils"
+Bundle "tomtom/tlib_vim"
+Bundle "garbas/vim-snipmate"
+Bundle "vadv/vim-chef"
 
 "Misc Plugins
-
 Bundle 'L9'
 Bundle 'mattn/gist-vim'
 Bundle 'mattn/webapi-vim'
@@ -41,6 +46,9 @@ Bundle 'vim-ruby/vim-ruby'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'JSON.vim'
 
+"Chef syntax highlighting
+autocmd FileType ruby,eruby set filetype=ruby.eruby.chef
+
 filetype plugin indent on     " required! 
 "
 " Brief help
@@ -62,10 +70,12 @@ set title
 
 set autoindent
 " Use spaces instead of tabs
+set shiftwidth=2
+set softtabstop=2
 set expandtab
 set background=dark
 colorscheme twilight 
-" colorscheme solarized
+"colorscheme solarized
 if has("gui_gtk2")
   set guifont=Inconsolata\ 12
 else
@@ -73,9 +83,9 @@ else
 endif
 set ignorecase
 set vb " turns off visual bell
-set smartindent
-set laststatus=2
-set statusline=
+"set smartindent
+"set laststatus=2
+"set statusline=
 set statusline+=%-3.3n\                      " buffer number
 set statusline+=%f\                          " filename
 set statusline+=%h%m%r%w                     " status flags
@@ -88,6 +98,9 @@ set statusline+=%<%P                         " file position
 
 compiler ruby
 
+autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1 
+autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
+autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
 
 let g:fuzzy_ignore = "*.log" 
 let g:fuzzy_matching_limit = 70
