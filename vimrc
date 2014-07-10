@@ -15,7 +15,7 @@ Bundle 'PProvost/vim-ps1'
 Bundle 'groenewege/vim-less'
 Bundle 'majutsushi/tagbar'
 Bundle 'scrooloose/syntastic'
-"Bundle 'fatih/vim-go'
+Bundle 'fatih/vim-go'
 "Chef syntax
 Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
@@ -48,6 +48,9 @@ Bundle 'JSON.vim'
 
 "Chef syntax highlighting
 autocmd FileType ruby,eruby set filetype=ruby.eruby.chef
+
+"Go turn off autoinstall
+let g:go_disable_autoinstall = 1
 
 filetype plugin indent on     " required! 
 "
@@ -120,10 +123,13 @@ let g:Powerline_symbols = 'fancy'
 set grepprg=ack
 set grepformat=%f:%l:%m
 
+"Shortcuts for plugins and stuffs
 map <leader>t :CtrlP<CR>
 map <leader>b :CtrlPBuffer<CR>
 map <leader>d :execute 'NERDTreeToggle ' . getcwd()<CR>
 map <leader>j :TagbarToggle<CR>
+noremap cp yap<S-}>p
+noremap <leader>a =ip
 
 " Hold command to do the g for softwrap
 vmap <D-j> gj
