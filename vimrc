@@ -49,6 +49,12 @@ Bundle 'JSON.vim'
 "Chef syntax highlighting
 autocmd FileType ruby,eruby set filetype=ruby.eruby.chef
 
+"Complain if I try to use arrow keys in vim
+nnoremap <Left>  :echoerr "I don't like that direction... try 'h' instead."<cr>
+nnoremap <Right> :echoerr "Republican, eh? I prefer 'l'."<cr>
+nnoremap <Up>    :echoerr "This is why we can't have nice things. You should have used 'k'."<cr>
+nnoremap <Down>  :echoerr "That's what she said... and then used 'j'."<cr>
+
 "Go turn off autoinstall
 let g:go_disable_autoinstall = 1
 
